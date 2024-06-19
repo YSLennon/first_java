@@ -127,5 +127,27 @@ public class Day3 {
 		System.out.println(i);
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
