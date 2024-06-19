@@ -13,11 +13,8 @@ public class TestClass {
 		
 		
 		smallCommonMultiple(a, b);
-		
-		// ㅇㅁㄴ111 
-		// Tests
-		// last Test
-		
+
+
 		
 		
 	}

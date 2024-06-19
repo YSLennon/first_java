@@ -17,7 +17,7 @@ public class Day3 {
 			System.out.println(i);
 
 			i++;
-  
+
 		}
 
 	}
@@ -66,6 +66,7 @@ public class Day3 {
 		int choice;
 		int solvedQuestion = 0;
 		int question = 0;
+
 		do {
 			System.out.print("구구단 시작(1),채점(2), 종료(0): ");
 			choice = scan.nextInt();
@@ -83,8 +84,19 @@ public class Day3 {
 					if (answer == x * y) {
 						System.out.println("정답!");
 						solvedQuestion += 1;
-					}
+					} else {
+						System.out.println("오답입니다. 한 번 다시 풀어보시겠습니까? \n 다시 푸시려면 1번, 아니면 숫자를 입력해주세요");
+						int retry = scan.nextInt();
+						if (retry == 1) {
+							System.out.println(x + " * " + y + " = ");
+							answer = scan.nextInt();
+							if (answer == x * y) {
+								System.out.println("정답!");
+								solvedQuestion += 1;
+							} else System.out.println("오답입니다! 다시 공부하세요!");
+						}
 
+					}
 				}
 			} else if (choice == 2) {
 				System.out.println("현재까지 " + question + "문제 중 " + solvedQuestion + "문제 맞히셨습니다.");
@@ -99,17 +111,18 @@ public class Day3 {
 		} while (choice != 0);
 
 	}
+
 //	전역변수개념~
 	static void var_1() {
 
 		int num = 10;
-		if(true) {
+		if (true) {
 			num = 20;
 		}
 		// 마지막 증감시 i++로 i가 11이 된 채로 바깥에서 읽어진다. 헷갈리지 않게 조심하도록
-		int i ;
-		for(i=1 ; i <=10 ; i++) {
-			
+		int i;
+		for (i = 1; i <= 10; i++) {
+
 		}
 		System.out.println(i);
 
