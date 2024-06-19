@@ -6,32 +6,100 @@ import java.util.Scanner;
 public class DailyTest3 {
 
 	public static void main(String[] args) {
+
+		test1();
+	}
+
+	static void test1() {
+		for (int i = 10; i <= 50; i++) {
+			if (i % 3 == 0 && i % 2 == 0) {
+				System.out.println(i);
+			}
+		}
+	}
+
+	static void test2() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("숫자를 두번 입력해주세요.");
+		int x = scan.nextInt();
+		int y = scan.nextInt();
+
+		if (x + y > 10)
+			if(x>y) {
+				System.out.println(x);	
+			}else {
+				System.out.println(y);
+			}
+			
+		else if(x>y) {
+			System.out.println(y);
+		} else {
+			System.out.println(x);
+		}
+			
+	}
+
+	static void test3() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("숫자를 입력해주세요.");
+		int x = scan.nextInt();
+
+		for (int i = 1; i <= 9; i++) {
+			System.out.println(x + " * " + i + " = " + x * i);
+		}
+
+	}
+
+	static void test4() {
+		Random ran = new Random();
+		Scanner scan = new Scanner(System.in);
 		
-	
+		int randomNumb = ran.nextInt(100)+1;
+		System.out.println("숫자를 입력해주세요");
+		int userNumb = scan.nextInt();
+		if( randomNumb > userNumb) {
+			System.out.println("입력한 수가 더 작습니다.");		
+		}else if (randomNumb < userNumb) {
+			System.out.println("입력한 수가 더 큽니다.");
+		}else {
+			System.out.println("입력한 수와 동일합니다.");
+		}
+		
 	}
 	
-	static void Test1() {
+	static void test5() {
 		
-		// 구구단 프로그램을 만드세요.
-//		1. 처음 출력은 "문제풀이(1) 종료 (그외 숫자)"
-//		2. 1을 선택하면 랜덤한 구구단 문제 출력
-//		"몇 문제 푸시겠습니까?" 출력 후
-//		사용자가 입력한 숫자만큼 랜덤한 구구단 문제 출제
-//		- 정답을 입력할 경우 "정답!", 아닐 경우 "오답!" 출력
-//		3. 문제를 다 풀었을 경우 다시 1번으로 돌아가서 선택하게 함
-//		4. 1번 메뉴에서 1을 제외한 다른 숫자를 누르면 "프로그램이 종료되었습니다." 출력 후 종료
-		
-		Scanner scan = new Scanner(System.in);
-		Random ran = new Random();
-		
-		System.out.println("문제풀이(1) 종료(그 외 숫자)");
-		int choice = scan.nextInt();
-		
-		
-		
+		for(int i =1; i<+30 ; i++) {
+			if(10 <= i && i < 20) {
 				
+			}else {System.out.println(i);
+			
+			}
+			
+		}
 		
 		
+	}
+	
+	static void test6() {
+
+		int i = 2;
+		while(i <= 9) {
+			int j = 1;
+			if(i == 4 || i == 8) {
+				
+			} else {
+
+				while(j <=9) {
+					System.out.println(i + " * " + j + " = " + i*j);
+					j++;
+				}
+				
+			}
+			i++;
+
+			
+		}
 	}
 	
 	
