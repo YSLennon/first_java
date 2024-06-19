@@ -14,7 +14,7 @@ public class TestClass {
 		
 		smallCommonMultiple(a, b);
 		
-		
+		// ㅇㅁㄴ
 		
 		
 		
