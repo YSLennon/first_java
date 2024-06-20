@@ -9,7 +9,7 @@ public class Solution {
 	public static void main(String[] args) {
 
 		System.out.println(Arrays.toString(solution(1, 2, 3, 4)));
-
+		
 
 	}
 
@@ -58,9 +58,11 @@ public class Solution {
 	// 2. 비교 후 최소공배수 구하기
 	 int makeSmallCommonMultiple(int d1, int d2) {
 
+		 
 		List<Integer> x = cutTheNumber(d1);
 		List<Integer> y = cutTheNumber(d2);
 		List<Integer> list = new ArrayList<Integer>();
+		
 
 		int returnInt = 1;
 		for (int i = 0; i < x.size(); i++) {
