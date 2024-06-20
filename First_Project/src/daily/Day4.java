@@ -8,7 +8,8 @@ public class Day4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println(Arrays.toString(array_8()));
+//		System.out.println(Arrays.toString(array_8()));
+		array_9();
 
 	}
 
@@ -123,7 +124,43 @@ public class Day4 {
 
 	}
 
-	
+	static void array_9() {
+		Scanner scan = new Scanner(System.in);
+		
+		int[] arr = new int[5];
+		int max =0;
+		int min =0;
+		int tmp;
+		
+		for(int i =0; i < 5 ; i++) {
+
+				System.out.println(i+1 + " 번째 숫자를 입력해주세요");
+				arr[i] = scan.nextInt();
+				if(i == 0) continue;
+				
+				for(int j =0; j < i ; j++) {
+					if(arr[i] == arr[j]){
+						System.out.println("이미 동일한 숫자를 입력하셨습니다.");
+						i--;
+					}
+
+				}
+		}
+		System.out.println("입력하신 배열은 " + Arrays.toString(arr)+ " 입니다.");
+		
+		for(int i =1 ; i<arr.length ; i++) {
+			if(arr[max] < arr[i]) max =i;
+			if (arr[min] > arr[i]) min = i;
+		}
+		
+		tmp = arr[max];
+		arr[max] = arr[min];
+		arr[min] = tmp;
+		
+		System.out.println("최댓값과 최솟값의 위치를 변경한 배열은 " + Arrays.toString(arr) + " 입니다.");
+		
+		
+	}
 	
 	
 	
