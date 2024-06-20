@@ -8,8 +8,8 @@ public class Day4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-//		System.out.println(Arrays.toString(array_8()));
-		array_9();
+		System.out.println(Arrays.toString(array_12()));
+//		System.out.println(array_11());
 
 	}
 
@@ -163,9 +163,46 @@ public class Day4 {
 	}
 	
 	
+	static void array_10() {
+		int[] arr = {1,2,3,4,5};
+		int sum = 0;
+		for(int num: arr) {
+			sum += num;
+			System.out.println(num);
+		}
+		double a = (double) sum/arr.length;
+	}
+	
+	static double array_11() {
+		
+		int arr[] = {10, 30, -5, -8, 16};
+		
+		int sum = 0;
+		int count = 0;
+		for(int num : arr) {
+			if(num>0) {
+				sum += num;
+				count++;
+			}
+			
+		}
+		double answer = (double)sum/count++;
+		return answer;
+	}
 	
 	
+	static int[] array_12() {
+		
+		int[] arr = {1,2,3,4,5};
+		Arrays.sort(arr);
+		
+		Math.max(3,5);
+		
+		return arr;
+		
+	}
 	
+	 
 	
 	
 	
