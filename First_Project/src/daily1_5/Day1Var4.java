@@ -1,4 +1,4 @@
-package daily;
+package daily1_5;
 
 public class Day1Var4 {
 

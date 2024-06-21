@@ -1,4 +1,4 @@
-package dailyTest;
+package daily1_5Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;

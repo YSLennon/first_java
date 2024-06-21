@@ -1,4 +1,4 @@
-package dailyTest;
+package daily1_5Test;
 
 import java.util.Random;
 import java.util.Scanner;

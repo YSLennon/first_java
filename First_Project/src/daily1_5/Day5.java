@@ -1,22 +1,14 @@
-package daily;
+package daily1_5;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-class Calculator{
-	
-	int sum(int x , int y) {
-		
-		 
-		return x+y;
-	}
-}
 
 public class Day5 {
 
 	public static void main(String[] args) {
 
-		Calculator calc = new Calculator();
+		Calculator_1 calc = new Calculator_1();
 		System.out.println(calc.sum(10,3));
 
 		
@@ -132,8 +124,8 @@ class Human {
 
 	Human(int age, String name) {
 		System.out.println("생성자다!2");
-		age = this.age;
-		name = this.name;
+		this.age = age;
+		this.name = name;
 
 	}
 
