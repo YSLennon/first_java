@@ -20,14 +20,14 @@ public class Solution4 {
 		int attackTurn = 0;
 
 //	        총 공격 턴
-		end: for (int i = 0; i < attacks[attacks.length - 1][0]; i++) {
+		for (int i = 0; i < attacks[attacks.length - 1][0]; i++) {
 //	        		공격 당하면
 			if (i == attacks[attackTurn][0]) {
 				bandageTime = bandage[0];
 				health -= attacks[attackTurn][1];
 				attackTurn++;
 				if (health <= 0)
-					break end;
+					break;
 
 			} else {
 				// 스킬 효과 -> 회복이 먼저일듯
