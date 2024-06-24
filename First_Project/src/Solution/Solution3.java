@@ -14,6 +14,7 @@ public class Solution3 {
 	}
 
 	public static int solution(String[] friends, String[] gifts) {
+		
 		int answer = 0;
 
 		int[][] thisMonAToB = new int[friends.length][friends.length];
@@ -27,6 +28,7 @@ public class Solution3 {
 			String[] aToB = String.valueOf(gifts[i]).split(" ");
 			String a = aToB[0];
 			String b = aToB[1];
+			
 			int give = 0;
 			int receive = 0;
 
@@ -54,6 +56,7 @@ public class Solution3 {
 
 			}
 		}
+		
 		for(int i =1 ; i<nextReceive.length ; i++) {
 			if(nextReceive[i] > nextReceive[max]) max = i;
 		}
