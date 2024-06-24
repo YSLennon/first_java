@@ -2,7 +2,7 @@ package Solution;
 
 import java.util.Arrays;
 // 가장 많이 받은 선물 - programmers
-public class Solution_3 {
+public class Solution3 {
 
 	public static void main(String[] args) {
 
@@ -43,15 +43,13 @@ public class Solution_3 {
 		
 		
 		for (int i = 0; i < thisMonAToB.length; i++) {
-			for (int j = 0; j < thisMonAToB.length; j++) {
-				
+			for (int j = i; j < thisMonAToB[i].length; j++) {
+				if(i==j) continue;
               if(thisMonAToB[i][j] < thisMonAToB[j][i]) {
             	  nextReceive[j]++;
               }else if (thisMonAToB[i][j] > thisMonAToB[j][i]) {
             	  nextReceive[i]++;
-              }
-              
-              if(presentPoint[i] > presentPoint[j]) nextReceive[i]++;
+              }else if(presentPoint[i] > presentPoint[j]) nextReceive[i]++;
               else if(presentPoint[i] < presentPoint[j]) nextReceive[j]++;
 
 			}
