@@ -1,4 +1,4 @@
-package P1;
+package day6_P1;
 
 public class MainClass {
 

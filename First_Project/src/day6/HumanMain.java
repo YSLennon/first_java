@@ -14,6 +14,7 @@ public class HumanMain {
 		System.out.println(kim.publicMoney);
 		System.out.println(Math.PI);
 		
+		
 
 	}
 

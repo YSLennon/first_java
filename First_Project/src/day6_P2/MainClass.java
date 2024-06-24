@@ -1,6 +1,6 @@
-package P2;
+package day6_P2;
 
-import P1.AClass;
+import day6_P1.AClass;
 
 public class MainClass {
 

@@ -1,6 +1,6 @@
-package P2;
+package day6_P1;
 
-public class BClass {
+public class AClass {
 
 	public String publicVar ;
 	String defaultVar;
