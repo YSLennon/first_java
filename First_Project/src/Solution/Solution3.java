@@ -20,7 +20,7 @@ public class Solution3 {
 		int[] presentPoint = new int[friends.length];
 		int[] nextReceive = new int[friends.length];
 		int max =0;
-
+ 
 		// 선물 갯수 체크하기
 		for (int i = 0; i < gifts.length; i++) {
 			// 선물을 누가 누구한테 줬는지 확인하기
