@@ -1,5 +1,7 @@
 package day6_Test2;
 
+import java.util.Arrays;
+
 public class TestMain {
 
 	public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class TestMain {
 		int[] arr = {2,5,3,1,4};
 		TestArray.changeArray(arr);
 		
-		System.out.println(arr);
+		System.out.println(Arrays.toString(arr));
 		// 메서드가 리턴이 필요없는 이유
 		
 //		changeArray 메서드는 배열을 매개변수로 받아서 해당 객체의 위치 변경을 하는 메서드이다.
