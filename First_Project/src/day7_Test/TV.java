@@ -21,13 +21,13 @@ class ColorTV extends TV {
 
 class IPTV extends ColorTV {
 	String name = "IPTV";
-	String domain;
+	String ip;
 	IPTV(String domain, int size, int color){
 		super(size, color);
-		this.domain = domain;
+		this.ip = domain;
 	}
 	@Override
 	void printProperty() {
-		System.out.println("나의 " +name + "는 " + domain + " 주소의 " + getSize() + "인치 "+ color+"컬러");
+		System.out.println("나의 " +name + "는 " + ip + " 주소의 " + getSize() + "인치 "+ color+"컬러");
 	}
 }
