@@ -13,6 +13,7 @@ public class Solution4 {
 	static int solution(int[] bandage, int health, int[][] attacks) {
 		int answer;
 
+
 		int maxHp = health;
 		int bandageTime = bandage[0];
 		int secHeal = bandage[1];
@@ -20,7 +21,7 @@ public class Solution4 {
 		int attackTurn = 0;
 
 //	        총 공격 턴
-		for (int i = 0; i < attacks[attacks.length - 1][0]; i++) {
+		for (int i = 0; i <= attacks[attacks.length - 1][0]; i++) {
 //	        		공격 당하면
 			if (i == attacks[attackTurn][0]) {
 				bandageTime = bandage[0];
@@ -30,11 +31,11 @@ public class Solution4 {
 					break;
 
 			} else {
-				// 스킬 효과 -> 회복이 먼저일듯
+				// 붕대감기
 				bandageTime--;
-				health = (health + secHeal > maxHp) ? health : health + secHeal;
+				health = (health + secHeal > maxHp) ? maxHp : health + secHeal;
 				if (bandageTime == 0) {
-					health = (health + addedHeal > maxHp) ? health : health + addedHeal;
+					health = (health + addedHeal > maxHp) ? maxHp : health + addedHeal;
 					bandageTime = bandage[0];
 				}
 
