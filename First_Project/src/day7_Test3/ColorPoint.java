@@ -6,11 +6,12 @@ public class ColorPoint extends Point {
 		super(0,0);
 		color = "BLACK";
 	}
+	
 
 	ColorPoint(int x, int y) {
-
-		super(x, y);
-		color = "BLACK";
+		this(0, 0, "BLACK");
+//		super(x, y);
+//		color = "BLACK";
 		
 	}
 	ColorPoint(int x, int y, String color) {
