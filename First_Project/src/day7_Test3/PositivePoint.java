@@ -15,6 +15,7 @@ public class PositivePoint extends Point {
 
 	}
 
+	@Override
 	public String toString() {
 		return "(" + getX() + "," + getY() + ")의 점";
 	}
