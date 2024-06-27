@@ -17,5 +17,4 @@ public class Animal {
 		System.out.println(name + "이 소리를 냅니다.");
 	}
 	
-	
 }
