@@ -14,7 +14,7 @@ public class Animal {
 		System.out.println("이름 : " + name + ", 나이: " + age);
 	}
 	void sound() {
-		System.out.println("동물이 소리를 냅니다.");
+		System.out.println(name + "이 소리를 냅니다.");
 	}
 	
 	
