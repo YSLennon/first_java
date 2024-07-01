@@ -16,6 +16,7 @@ public class Main {
 		String flg = "";
 
 		while (!flg.equals("그만")) {
+			System.out.print(">> ");
 			String userString = scan.nextLine();
 			if (!userString.equals("그만")) {
 				String[] strArr = userString.split(",");
@@ -23,7 +24,6 @@ public class Main {
 				list.add(stu);
 			} else
 				flg = userString;
-
 		}
 
 		Iterator<Student> listIterator = list.iterator();
