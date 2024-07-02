@@ -22,8 +22,11 @@ public class FruitStore {
 				break;
 		}
 	}
+	// TODO 가격이나 수량을 음수로 입력할 경우 메시지 "음수 입력은 불가능" 출혁 후 메인으로 이동한다. 
 
 	private void register() {
+		// TODO 중복된 과일이 입력될 경우 기존 값에 개수를 더해줌 + 가격을 물어보지 않는다.
+		
 		HashMap<String, Object> map = new HashMap<>();
 
 		map.put("name", input("name"));
@@ -52,7 +55,6 @@ public class FruitStore {
 					System.out.println("과일이 모자랍니다.");
 					return;
 				}
-					
 
 			}
 
