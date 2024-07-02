@@ -10,16 +10,15 @@ public class Score {
 
 	HashMap<String, Object> saveScore() {
 		HashMap<String, Object> map = new HashMap<>();
-		
+
 		System.out.print("이름 >> ");
 		map.put("name", scan.nextLine());
 		map.put("java", checkNumb("Java", 35));
 		map.put("oracle", checkNumb("Oracle", 40));
 		map.put("html", checkNumb("HTML", 25));
-		
-		
+
 		return map;
-		
+
 	}
 
 	void printScore(ArrayList<HashMap<String, Object>> list) {
