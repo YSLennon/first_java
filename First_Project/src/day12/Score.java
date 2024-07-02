@@ -35,7 +35,6 @@ public class Score {
 	}
 
 	private int checkNumb(String name, int score) {
-		Scanner scan = new Scanner(System.in);
 		HashMap<String, Object> hashMap = new HashMap<String, Object>();
 		while (true) {
 			System.out.print(name + " >> ");
