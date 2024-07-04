@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class jdbc_2 {
+public class Jdbc_2 {
 	
 	public static void main(String[] args) {
 		Connection conn;
@@ -22,7 +22,7 @@ public class jdbc_2 {
 //			System.out.println("DB 연결 완료");
 			stmt = conn.createStatement();
 
-			insertQuery(stmt);
+//			insertQuery(stmt);
 //			String query = "insert into student(stu_no, stu_name) values(12345678, '홍길동')";
 //			stmt.executeUpdate(query);
 
