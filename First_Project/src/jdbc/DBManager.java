@@ -6,16 +6,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
-
 public class DBManager {
-	 //TODO: 패러미터로 where 값 같은것을 추가로 받아 분할해서 양식에 맞는 데이터로 뽑는 알고리즘 만들기!
+	// TODO: 패러미터로 where 값 같은것을 추가로 받아 분할해서 양식에 맞는 데이터로 뽑는 알고리즘 만들기!
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		DBManager db = new DBManager();
-		ArrayList <String> selectList;
-		
+		ArrayList<HashMap<String, String>> selectList = new ArrayList<>();
+
 		Connection conn;
 		Statement stmt = null;
 		try {
@@ -30,17 +31,21 @@ public class DBManager {
 			while (true) {
 				System.out.println("1. 테이블 생성 및 업데이트 2. 조회하기 etc. 종료");
 				String input = scan.nextLine();
+				
 				if (input.equals("1")) {
 					System.out.println("Table 업데이트 문구를 입력해주세요: ");
 					input = scan.nextLine();
-					stmt.executeUpdate(input);
+					db.createTable(stmt, input);
+					
 					continue;
 
 				} else if (input.equals("2")) {
 					System.out.println("Table 조회 문구를 입력해주세요: ");
+
 					input = scan.nextLine();
-					ResultSet rs = stmt.executeQuery(input);
-					db.printData(rs);
+
+					db.printData(stmt, input);
+
 					continue;
 
 				} else {
@@ -57,10 +62,60 @@ public class DBManager {
 		}
 
 	}
+// 검증 코드 : select stu_name, stu_dept from student
 	
-	private void printData(ResultSet rs) throws SQLException {
-		while(rs.next()) {
-			System.out.println(rs.getString("stu_name")); 
+// TODO 새로 만든 Table은 HashMap 형태로 담아서 리스트에 추가하기! 이름 - 타입으로 정리
+	private HashMap<String, String> createTable(Statement stmt, String input) throws SQLException{
+		// create table student ( a char primarykey, a number , dddd etc ,  )
+		HashMap<String, String> map = new HashMap<>();
+		stmt.executeUpdate(input);
+		
+		System.out.println("Table 업데이트 문구를 입력해주세요: ");
+		String[] seprateTableName = input.split("(");
+		String tableName = seprateTableName[0].substring(seprateTableName[0].trim().lastIndexOf(" ")+1);
+		
+		String columnString = seprateTableName[1];
+		columnString = columnString.substring(0, columnString.length()-1);
+		
+		String[] columnArr = columnString.split(",");
+		for(String column : columnArr) {
+			String[] arr = column.split(" ");
+			
+			map.put(arr[0],arr[1]);
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+	private void printData(Statement stmt, String input) throws SQLException {
+		String query;
+		
+
+		ResultSet rs = stmt.executeQuery(input);
+
+		int selectIndex = input.indexOf("select");
+		int fromIndex = input.indexOf("from");
+
+		String[] strArr = input.substring(selectIndex + 6, fromIndex).split(",");
+		System.out.println(Arrays.toString(strArr));
+		while (rs.next()) {
+			for (String column : strArr) {
+				column.trim();
+				System.out.println(rs.getString("stu_name"));
+//				System.out.print("\t" + rs.getString(column));
+			}
+			System.out.println();
+
 		}
 	}
 
