@@ -56,7 +56,6 @@ public class KeyCodeEx extends JFrame {
 				int keyChar = e.getKeyChar();
 
 				isUnicode = true;
-				c.setBackground(Color.white);
 
 				if (keyChar == '5')
 					c.setBackground(Color.yellow);
