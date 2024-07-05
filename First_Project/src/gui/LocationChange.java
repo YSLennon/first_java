@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
+ // TODO 게임으로 만들기
 public class LocationChange extends JFrame {
 	Container c;
 	JLabel message;
