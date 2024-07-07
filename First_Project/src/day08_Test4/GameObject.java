@@ -5,16 +5,17 @@ public abstract class GameObject { // 추상 클래스
 	protected int x, y; // 현재 위치(화면 맵 상의 위치)
 	
 	public GameObject(int startX, int startY, int distance) { // 초기 위치와 이동 거리 설정
+		if(startX >= 20) startX = 19;
+		if(startY >= 10) startY = 9;
+		if(startX < 0) startX = 0;
+		if(startY < 0) startY =0;
 		this.x = startX; this.y = startY;
 		this.distance = distance;
 	}
 	public int getX() { return x; }
 	public int getY() { return y; }
 	public boolean collide(GameObject p) { // 이 객체가 객체 p와 충돌했으면 true 리턴
-		if(this.x == p.getX() && this.y == p.getY())
-			return true;
-		else 
-			return false;
+		return (this.x == p.getX() && this.y == p.getY());
 	}
 	
 	protected abstract void move(String str); // 이동한 후의 새로운 위치로 x, y 변경
