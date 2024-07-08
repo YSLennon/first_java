@@ -64,6 +64,7 @@ public class DBManager {
 	}
 // 검증 코드 : select stu_name, stu_dept from student
 	
+//	create table student(a, b, c, d, ) 
 // TODO 새로 만든 Table은 HashMap 형태로 담아서 리스트에 추가하기! 이름 - 타입으로 정리
 	private HashMap<String, String> createTable(Statement stmt, String input) throws SQLException{
 		// create table student ( a char primarykey, a number , dddd etc ,  )
@@ -73,18 +74,18 @@ public class DBManager {
 		System.out.println("Table 업데이트 문구를 입력해주세요: ");
 		String[] seprateTableName = input.split("(");
 		String tableName = seprateTableName[0].substring(seprateTableName[0].trim().lastIndexOf(" ")+1);
+		map.put("tableName", tableName);
 		
 		String columnString = seprateTableName[1];
 		columnString = columnString.substring(0, columnString.length()-1);
-		
-		String[] columnArr = columnString.split(",");
-		for(String column : columnArr) {
-			String[] arr = column.split(" ");
-			
-			map.put(arr[0],arr[1]);
-			
-			
-		}
+		map.put("tableValue", columnString);
+//		
+//		String[] columnArr = columnString.split(",");
+//		for(String column : columnArr) {
+//			String[] arr = column.split(" ");
+//			map.put(arr[0],arr[1]);
+//		}
+//		
 		
 		
 		
