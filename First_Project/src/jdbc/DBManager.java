@@ -10,6 +10,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
+// 제대로 설계 먼저 해보자
 public class DBManager {
 	// TODO: 패러미터로 where 값 같은것을 추가로 받아 분할해서 양식에 맞는 데이터로 뽑는 알고리즘 만들기!
 	public static void main(String[] args) {
@@ -31,12 +33,12 @@ public class DBManager {
 			while (true) {
 				System.out.println("1. 테이블 생성 및 업데이트 2. 조회하기 etc. 종료");
 				String input = scan.nextLine();
-				
+
 				if (input.equals("1")) {
 					System.out.println("Table 업데이트 문구를 입력해주세요: ");
 					input = scan.nextLine();
-					db.createTable(stmt, input);
-					
+//					db.createTable(stmt, input);
+
 					continue;
 
 				} else if (input.equals("2")) {
@@ -63,22 +65,21 @@ public class DBManager {
 
 	}
 // 검증 코드 : select stu_name, stu_dept from student
-	
+
 //	create table student(a, b, c, d, ) 
 // TODO 새로 만든 Table은 HashMap 형태로 담아서 리스트에 추가하기! 이름 - 타입으로 정리
-	private HashMap<String, String> createTable(Statement stmt, String input) throws SQLException{
-		// create table student ( a char primarykey, a number , dddd etc ,  )
-		HashMap<String, String> map = new HashMap<>();
-		stmt.executeUpdate(input);
-		
-		System.out.println("Table 업데이트 문구를 입력해주세요: ");
-		String[] seprateTableName = input.split("(");
-		String tableName = seprateTableName[0].substring(seprateTableName[0].trim().lastIndexOf(" ")+1);
-		map.put("tableName", tableName);
-		
-		String columnString = seprateTableName[1];
-		columnString = columnString.substring(0, columnString.length()-1);
-		map.put("tableValue", columnString);
+//	private HashMap<String, String> createTable(Statement stmt, String input) throws SQLException{
+//		// create table student ( a char primarykey, a number , dddd etc ,  )
+//		HashMap<String, String> map = new HashMap<>();
+//		stmt.executeUpdate(input);
+//		
+//		System.out.println("Table 업데이트 문구를 입력해주세요: ");
+//		String[] seprateTableName = input.split("(");
+//		String tableName = seprateTableName[0].substring(seprateTableName[0].trim().lastIndexOf(" ")+1);
+//		map.put("tableName", tableName);
+//		
+//		String columnString = seprateTableName[1];
+//		columnString = columnString.substring(0, columnString.length()-1);
 //		
 //		String[] columnArr = columnString.split(",");
 //		for(String column : columnArr) {
@@ -86,21 +87,44 @@ public class DBManager {
 //			map.put(arr[0],arr[1]);
 //		}
 //		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		return null;
-	}
+//		
+//		if(columnArr.length<=10) {
+//			String query = "insert into adbmanager values( tableName " + tableName;
+//			for(String column : columnArr) {
+//				stmt.executeUpdate("insert into adbmanager values("+ i +")")
+//			}
+//			
+//
+//			while(true) {
+//				
+//					
+//			}
+//			
+//			
+//		}else {
+//			System.out.println("업데이트 할 수 없습니다.");
+//			}
+//		
+//
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		
+//		return null;
+//	}
+
 	private void printData(Statement stmt, String input) throws SQLException {
 		String query;
-		
 
 		ResultSet rs = stmt.executeQuery(input);
 
