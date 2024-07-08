@@ -20,6 +20,10 @@ public class ArrayTest {
 		}
 		System.out.println();
 
+		
+		
+		
+		// 배열은 0이 들어갈 수 있다는걸 생각해두자. 자꾸 까먹으면 안돼...
 		ArrayList<Integer> list = new ArrayList<>();
 		for (int i = 1; i <= 10; i++)
 			list.add(i);
