@@ -9,10 +9,9 @@ public class Test3 {
 
 		Random ran = new Random();
 		Scanner scan = new Scanner(System.in);
-		// 번 반복
 
 		int repeat = 5;
-		int goodAnswer = 0;
+		int goodAnswer = 0; // correctAnswer
 		int wrongAnswer = 0;
 		while (repeat > 0) {
 

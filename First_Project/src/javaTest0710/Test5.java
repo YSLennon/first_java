@@ -8,7 +8,9 @@ public class Test5 {
 		ArrayManager arrManager = new ArrayManager();
 		int[] question = { 1, 2, 3, 4, 5 };
 		int[] question2 = { 6, 4, 2, 1, 5 };
-		
+//		int[] questionArr = arrManager.makeIntArr();
+//		System.out.println(Arrays.toString(questionArr));
+
 		System.out.println("Question1");
 		
 		System.out.println("maxInt : " + arrManager.maxInt(question));

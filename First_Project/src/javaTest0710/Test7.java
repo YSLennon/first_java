@@ -1,5 +1,6 @@
 package javaTest0710;
 
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -12,10 +13,14 @@ public class Test7 {
 		int checkSameNumb = 0;
 		int arrIndex = 0;
 
+//		ArrayList<Integer> list = new ArrayList<>();
+
 		while (true) {
 			boolean skip = false;
 			System.out.print("숫자를 입력해주세요 : ");
 			int numb = scan.nextInt();
+
+			//
 			for (int i = 0; i < arr.length; i++) {
 				if (arr[i] == numb)
 					checkSameNumb++;
@@ -24,10 +29,23 @@ public class Test7 {
 					skip = true;
 					break;
 				}
-
 			}
+			//
+
+//			for (int i = 0; i < list.size(); i++) {
+//				if (arr[i] == numb)
+//					checkSameNumb++;
+//				if (arr[i] == numb && checkSameNumb > 1) {
+//					System.out.println("동일한 숫자 2개가 이미 존재합니다.");
+//					skip = true;
+//					break;
+//				}
+//			}
 
 			if (!skip) {
+
+//				list.add(arr[arrIndex]);
+
 				arr[arrIndex] = numb;
 				arrIndex++;
 
