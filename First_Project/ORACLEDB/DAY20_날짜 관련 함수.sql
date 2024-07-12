@@ -1,0 +1,15 @@
+-- 날짜 관련 함수
+
+-- SYSDATE : 서버기준 날짜 출력 -> MYSQL은 NOW를 사용함.
+    -- 시간 정보도 들어있지만 출력할때는 날짜만 나온다.
+SELECT SYSDATE
+FROM DUAL;
+
+SELECT 
+    SYSDATE,
+    TO_CHAR(SYSDATE, 'YYMMDD') AS CASE1,
+    TO_CHAR(SYSDATE, 'YYYYMMDD') AS CASE2,
+    TO_CHAR(SYSDATE, 'YYYY-MM-DD') AS CASE3,
+    TO_CHAR(SYSDATE, 'YYYY-MM-DD HH:MI:SS') AS CASE4,
+    TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS PM') AS CASE5 -- 24시간표기법, AM PM 표기
+    FROM DUAL;
