@@ -24,14 +24,19 @@ public class Test6_v2 {
             HashMap<String, Object> map = new HashMap<>();
 
             StringInputClass.inputStr(inputName, "이름을", alwaysTrue);
-            StringInputClass.inputStr(inputAge, "나이를", new CheckInputFlg() {
-                @Override
-                public boolean isTrue(String str) {
-                    if(Integer.parseInt(str) > 0 && Integer.parseInt(str) <= 100) return true;
-
-                    System.out.println("나이는 1부터 100까지 입력해주세요.");
-                    return false;
-                }
+//            StringInputClass.inputStr(inputAge, "나이를", new CheckInputFlg() {
+//                @Override
+//                public boolean isTrue(String str) {
+//                    if(Integer.parseInt(str) > 0 && Integer.parseInt(str) <= 100) return true;
+//
+//                    System.out.println("나이는 1부터 100까지 입력해주세요.");
+//                    return false;
+//                }
+//            });
+            StringInputClass.inputStr(inputAge, "나이를", str -> {
+            	if(Integer.parseInt(str) > 0 && Integer.parseInt(str) <= 100) return true;
+                System.out.println("나이는 1부터 100까지 입력해주세요.");
+                return false;
             });
             StringInputClass.inputStr(inputAddr, "주소를", alwaysTrue);
 
