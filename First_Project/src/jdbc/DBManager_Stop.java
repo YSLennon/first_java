@@ -10,12 +10,15 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
+// 재미로 만들어보려 했으나 실용성이 너무 없어서 기각하기로 함
+// 더 의미있는 DB 관련 코드로 다음에 다시 짜보자
+
 // 제대로 설계 먼저 해보자
-public class DBManager {
+public class DBManager_Stop {
 	// TODO: 패러미터로 where 값 같은것을 추가로 받아 분할해서 양식에 맞는 데이터로 뽑는 알고리즘 만들기!
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		DBManager db = new DBManager();
+		DBManager_Stop db = new DBManager_Stop();
 		ArrayList<HashMap<String, String>> selectList = new ArrayList<>();
 
 		Connection conn;
