@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StringInputClass {
 
 	
-	InputWrapperClass makeInput() {
+	InputWrapperClass makeWrapper() {
 		return new InputWrapperClass();
 	}
 

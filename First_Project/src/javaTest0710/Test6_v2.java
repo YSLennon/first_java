@@ -9,9 +9,9 @@ public class Test6_v2 {
         ArrayList<HashMap<String, Object>> list = new ArrayList<>();
         // Wrapper Class를 만들어서 str값을 wrapper 클래스에 담아서 전달
         StringInputClass inputClass = new StringInputClass();
-        InputWrapperClass inputName = inputClass.makeInput();
-        InputWrapperClass inputAge = inputClass.makeInput();
-        InputWrapperClass inputAddr = inputClass.makeInput();
+        InputWrapperClass inputName = inputClass.makeWrapper();
+        InputWrapperClass inputAge = inputClass.makeWrapper();
+        InputWrapperClass inputAddr = inputClass.makeWrapper();
 
         for (int i = 0; i < 3; i++) {
             HashMap<String, Object> map = new HashMap<>();
