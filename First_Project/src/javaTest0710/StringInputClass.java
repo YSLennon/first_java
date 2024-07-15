@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class StringInputClass {
 
+	
+	InputWrapperClass makeInput() {
+		return new InputWrapperClass();
+	}
+
 	CheckInputFlg defaultFlag = str -> {
 		return true;
 	};
 
 	// 문자 입력, 조건 체크 후 재입력받는 함수
-	static void inputStr(InputWrapperClass strClass, String inputStr, CheckInputFlg flg) {
+	 void inputStr(InputWrapperClass strClass, String inputStr, CheckInputFlg flg) {
 		Scanner scan = new Scanner(System.in);
 		while (true) {
 			System.out.print(inputStr + " 입력하세요 : ");
@@ -19,7 +24,7 @@ public class StringInputClass {
 		}
 	}
 	// 조건없이 입력만 받는 함수
-	static void inputStr(InputWrapperClass strClass, String inputStr) {
+	 void inputStr(InputWrapperClass strClass, String inputStr) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print(inputStr + " 입력하세요 : ");
 		strClass.str = scan.next();

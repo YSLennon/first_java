@@ -8,21 +8,22 @@ public class Test6_v2 {
 	public static void main(String[] args) {
         ArrayList<HashMap<String, Object>> list = new ArrayList<>();
         // Wrapper Class를 만들어서 str값을 wrapper 클래스에 담아서 전달
-        InputWrapperClass inputName = new InputWrapperClass();
-        InputWrapperClass inputAge = new InputWrapperClass();
-        InputWrapperClass inputAddr = new InputWrapperClass();
+        StringInputClass inputClass = new StringInputClass();
+        InputWrapperClass inputName = inputClass.makeInput();
+        InputWrapperClass inputAge = inputClass.makeInput();
+        InputWrapperClass inputAddr = inputClass.makeInput();
 
         for (int i = 0; i < 3; i++) {
             HashMap<String, Object> map = new HashMap<>();
 
-            StringInputClass.inputStr(inputName, "이름을");
-            StringInputClass.inputStr(inputAge, "나이를", str -> {
+            inputClass.inputStr(inputName, "이름을");
+            inputClass.inputStr(inputAge, "나이를", str -> {
             	if(Integer.parseInt(str) > 0 && Integer.parseInt(str) <= 100) return true;
 
                 System.out.println("나이는 1부터 100까지 입력해주세요.");
                 return false;
             });
-            StringInputClass.inputStr(inputAddr, "주소를");
+            inputClass.inputStr(inputAddr, "주소를");
             
             map.put("name", inputName.str);
             map.put("age", inputAge.str);
